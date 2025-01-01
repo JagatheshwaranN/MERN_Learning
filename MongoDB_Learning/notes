@@ -1,0 +1,62 @@
+Install node packages
+=====================
+npm init -y
+npm i nodemon -D [Developer Dependency]
+
+=================
+Got below error while executing the npm init -y command
+
+PS D:\Environment_Collection\VisualStudio_Env\MongooseLearning> npm init
+npm : File C:\Program Files\nodejs\npm.ps1 cannot be loaded because running scripts is disabled on this system. 
+For more information, see about_Execution_Policies at 
+https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ npm init
++ ~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS D:\Environment_Collection\VisualStudio_Env\MongooseLearning>
+
+Issue & Solution
+================
+This error occurs because the execution of PowerShell scripts is restricted by the system's execution policy.
+To fix it, follow these steps:
+
+1. Check the Current Execution Policy
+Open PowerShell as Administrator and run:
+Get-ExecutionPolicy
+It might return something restrictive like Restricted or AllSigned.
+
+2. Change the Execution Policy
+Run the following command to allow script execution:
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+Explanation:
+-Scope CurrentUser: Changes the policy for the current user only (doesn't require admin rights).
+-ExecutionPolicy RemoteSigned: Allows locally created scripts to run but requires scripts downloaded 
+from the internet to be signed.
+
+3. Re-run the npm Command
+Close and reopen PowerShell or your terminal, then run your npm command again.
+
+4. (Optional) Reset the Policy After Use
+If you prefer to restore the original policy after completing your tasks:
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Restricted
+
+============================c
+
+https://mongoosejs.com/
+
+npm install mongoose --save
+
+============================
+Nodemon - It is used to display the script output without running the command everytime.
+============================
+To run javascript file without nodemon, use the command 'node filename.js'
+============================
+To run javascript file with nodemon, we can use the command set in the package.json
+npm run dev - It will run the JS file without running the file execute command everytime.
+============================
+
+Validations used in the user.js file would work only with Create / Save functions.
+
