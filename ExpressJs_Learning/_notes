@@ -1,0 +1,61 @@
+#==============================================================================
+To get into Node terminal from Terminal
+#======================================
+1.Launch Terminal and type node
+PS D:\Environment_Collection\VisualStudio_Env\NodeJs_Learning> node
+Welcome to Node.js v22.12.0.      
+Type ".help" for more information.
+> 2+2
+4 
+ 
+2.To come out the Node terminal
+#==============================
+Type Ctrl+D
+
+3.ES6 Module is not taken into Node. Hence, import statement can't be used.
+We have alternates for the same.
+
+The workoaround is using of .mjs extenstion to the files.
+#==============================================================================
+To install the node packages specific to the project
+#===================================================
+npm init -y
+The above command will create the package.json file with default values.
+
+If you wish to provide the values at runtime, then use the below command.
+npm init
+
+To have the dependencies needed for the project, we need to use the below code.
+npm i date-fns [date-fns is an exmaple of dependency]
+
+The dependency files are stored inside the node_module packages.
+
+Note: We can install the dependencies in following ways
+#======================================================
+npm i <dependency_name> -D / --save-dev [It will install as Dev Dependency for Project]
+npm i <dependency_name> --save [It will install as Prod Dependency for Project]
+npm i <dependency_name> -g [It will install Dependency globally]
+npm i <dependency_name>@<version> [To install particular version of the dependency]
+npm rm <dependency_name> -D [It will remove the dependency which is Dev Dependency]
+#==============================================================================
+Understanding of dependencies in package.json
+#============================================
+"dependencies": {
+    "date-fns": "^4.1.0",
+    "uuid": "^11.0.3"
+  }
+
+1.^ symbol allows only to update the minor version of the dependency
+i.e., if we run npm update, and for date-fns, if there is any change in version
+such as 4.2.0, it will allowed to be updated. But, if there any change as 5.0.0
+it will not be allowed to be updated.
+
+2.~ symbol is used in dependencies which won't allow to update the dependencies
+in both minor and major versions.
+
+3.* symbol allows to update both major and minor versions which is not recommended.
+#==============================================================================
+To install Express
+#=================
+npm i express
+#==============================================================================
