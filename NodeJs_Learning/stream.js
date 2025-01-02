@@ -1,8 +1,12 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const rs = fs.createReadStream(path.join(__dirname, 'files', 'big_file.txt'), {encoding: 'utf8'});
-const ws = fs.createWriteStream(path.join(__dirname, 'files', 'new_big_file.txt'));
+const rs = fs.createReadStream(path.join(__dirname, "files", "big_file.txt"), {
+  encoding: "utf8",
+});
+const ws = fs.createWriteStream(
+  path.join(__dirname, "files", "new_big_file.txt")
+);
 
 // Approach 1
 // rs.on('data', (dataChunk) => {

@@ -26,7 +26,7 @@ import { readFile } from 'node:fs';
 // Approach 2
 readFile('./files/demo.txt', 'utf8', (err, data) => {
     if(err) throw err;
-    console.log(data); // Here, Buffer data convert with the use of encoding format
+    console.log(data); // Here, Buffer data converted with the use of encoding format
 })
 
 // Its a default function available with Node to capture the runtime errors.

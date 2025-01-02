@@ -36,7 +36,7 @@ Type ".help" for more information.
 #==============================
 Type Ctrl+D
 
-3.ES6 Module is not brought into Node. Hence, import statement can't be used.
+3.ES6 Module is not taken into Node. Hence, import statement can't be used.
 We have alternates for the same.
 
 The workoaround is using of .mjs extenstion to the files.
@@ -54,12 +54,13 @@ npm i date-fns [date-fns is an exmaple of dependency]
 
 The dependency files are stored inside the node_module packages.
 
-Note: We can install the dependencies in 2 ways as below
+Note: We can install the dependencies in following ways
+#======================================================
 npm i <dependency_name> -D / --save-dev [It will install as Dev Dependency for Project]
 npm i <dependency_name> --save [It will install as Prod Dependency for Project]
-npm i <dependency_name> -g [It will install as Dependency globally]
+npm i <dependency_name> -g [It will install Dependency globally]
 npm i <dependency_name>@<version> [To install particular version of the dependency]
-npm rm <dependency_name> -D [It will remove the dependency]
+npm rm <dependency_name> -D [It will remove the dependency which is Dev Dependency]
 #==============================================================================
 Understanding of dependencies in package.json
 #============================================
