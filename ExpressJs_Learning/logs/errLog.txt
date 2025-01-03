@@ -1,0 +1,1 @@
+03012025	20:47:01	d01ae8be-2157-40e8-80cb-a5a527511f56	Error: Not allowed by CORS

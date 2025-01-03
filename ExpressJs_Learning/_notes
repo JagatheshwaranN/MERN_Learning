@@ -58,4 +58,14 @@ in both minor and major versions.
 To install Express
 #=================
 npm i express
+
+To install Cors
+#==============
+npm i cors
+
+Points to Note
+#=============
+1.ExpressJs code have to be placed in proper order to make it work properly.
+2.use() - can be used for middleware code. Regex can't be used inside it.
+3.all() - can be used for all method calls.
 #==============================================================================
