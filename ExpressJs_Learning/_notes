@@ -69,3 +69,10 @@ Points to Note
 2.use() - can be used for middleware code. Regex can't be used inside it.
 3.all() - can be used for all method calls.
 #==============================================================================
+Rest Client 
+#==========
+The Rest Client extension is used to mock the HTTP methods which would come from
+front end.
+After installing the extension, the file with extension .rest has to be created
+inside the project folder.
+#==============================================================================

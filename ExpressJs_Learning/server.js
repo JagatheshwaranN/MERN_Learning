@@ -1,7 +1,7 @@
-const http = require('http');
-const path = require('path');
-const fs = require('fs');
-const fsPromises = require('fs').promises;
+const http = require("http");
+const path = require("path");
+const fs = require("fs");
+const fsPromises = require("fs").promises;
 
 const logEvents = require("./log_events");
 const EventEmitter = require("events");
