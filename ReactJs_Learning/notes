@@ -1,0 +1,52 @@
+#======================================================
+React Links
+#==========
+https://legacy.reactjs.org/docs/cdn-links.html
+
+Babel Links
+#==========
+https://babeljs.io/docs/babel-standalone
+#======================================================
+To add language in Emmet
+#=======================
+1.File -> Preference -> Settings
+2.Navigate to Emmet: Include languages
+3.Add key value pair [Key: javascript and value: javascriptreact]
+#======================================================
+To install React
+#===============
+npx create-react-app demo_app 
+#======================================================
+Notes
+#====
+1.JS Objects can't be used inside the React Component using JSX.
+2.JS Boolean condition can't be used inside the React Component using JSX.
+3.Comment and Uncomment can be done using Ctrl + /
+4.Anonymous function should be used to pass parameter to the click event.
+5.Whenever we import hooks it should be imported inside {}.
+6.Inside Class Component we can't use the Use State hooks.
+7.Use State can't be called inside the conditional statements.
+8.Use State always returns the array of values.
+#======================================================
+Topics
+#=====
+1.JSX syntax
+2.Functional Components
+3.Applying CSS Styles
+4.Click Events
+5.Use State Block
+6.List and Keys
+#======================================================
+Creating the Functional Component Header with the help of ES6 extension installed.
+
+ShortCuts for Snippets
+#=====================
+1.Ctrl+Shift+P -> Insert Snippets
+2.Rafce [React Arrow Function Component using ES6]
+#======================================================
+
+Reference
+#========
+https://styled-components.com/
+https://www.npmjs.com/
+https://react-icons.github.io/react-icons/
