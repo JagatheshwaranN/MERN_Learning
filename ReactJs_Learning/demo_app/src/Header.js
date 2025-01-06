@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 // const Header = () => {
 //   return (
@@ -13,12 +13,16 @@ import React from 'react'
 //   )
 // }
 
-const Header = () => {
+const Header = ({title}) => {
   return (
     <header>
-        <h1>To do List</h1>
+      <h1>{title}</h1>
     </header>
-  )
+  );
+};
+
+Header.defaultProps = {
+  title: "To do List"
 }
 
-export default Header
+export default Header;
