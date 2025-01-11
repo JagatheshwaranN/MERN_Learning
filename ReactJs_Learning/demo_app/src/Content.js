@@ -78,7 +78,7 @@ import ListItem from "./ListItem";
 const Content = ({items, handleCheck, handleDelete}) => {
   
   return (
-    <main>
+    <>
       {(items.length) ? (
         <ListItem 
           items = {items}
@@ -87,7 +87,7 @@ const Content = ({items, handleCheck, handleDelete}) => {
         />
       ): (<p>Your list is Empty!</p>)
     }
-    </main>
+    </>
   );
 };
 
