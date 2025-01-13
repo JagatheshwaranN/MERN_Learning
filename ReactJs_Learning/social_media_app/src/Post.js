@@ -1,8 +1,7 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Post = ({ post }) => {
-  // const {id} = useParams()
   return (
     <article className="post">
       <Link to={`post/${post.id}`}>
