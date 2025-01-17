@@ -1,0 +1,14 @@
+#=======================================
+Lodash
+#=====
+Library for functional composition.
+npm i lodash
+#=======================================
+Redux ToolKit Installation
+#=========================
+npm install @reduxjs/toolkit
+#=======================================
+To install react bindings
+#========================
+npm install react-redux
+#=======================================
