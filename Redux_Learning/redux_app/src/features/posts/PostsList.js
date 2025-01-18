@@ -1,35 +1,42 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector} from "react-redux";
+// import {
+//   selectAllPosts,
+//   getPostsStatus,
+//   getPostsError
+// } from "./postsSlice";
 import {
-  selectAllPosts,
+  selectPostIds,
   getPostsStatus,
-  getPostsError,
-  fetchPosts,
+  getPostsError
 } from "./postsSlice";
-import { useEffect } from "react";
+
 import PostsExcerpts from "./PostsExcerpts";
 
 const PostsList = () => {
-  const dispatch = useDispatch();
-  const posts = useSelector(selectAllPosts);
+  // const posts = useSelector(selectAllPosts);
+  const orderedPostsIds = useSelector(selectPostIds);
   const postStatus = useSelector(getPostsStatus);
   const error = useSelector(getPostsError);
 
-  useEffect(() => {
-    if (postStatus === "idle") {
-      dispatch(fetchPosts());
-    }
-  }, [postStatus, dispatch]);
+  // Commenting out the below code to fix the refresh page content load issue
+  // Instead of fetching he data here, we will fetch at the very start like users.
+  // useEffect(() => {
+  //   if (postStatus === "idle") {
+  //     dispatch(fetchPosts());
+  //   }
+  // }, [postStatus, dispatch]);
 
   let content;
   if (postStatus === "loading") {
     content = <p>"Loading..."</p>;
   } else if (postStatus === "succeeded") {
     // The alternate way to show the lastest posts first
-    const orderedPosts = posts
-      .slice()
-      .sort((a, b) => b.date.localeCompare(a.date));
-    content = orderedPosts.map((post) => <PostsExcerpts key={post.id} post={post}/>);
+    // const orderedPosts = posts
+    //   .slice()
+    //   .sort((a, b) => b.date.localeCompare(a.date));
+    // content = orderedPosts.map((post) => <PostsExcerpts key={post.id} post={post}/>);
+    content = orderedPostsIds.map(postId => <PostsExcerpts key={postId} postId={postId}/>);
   } else if(postStatus==='failed') {
     content = <p>{error}</p>; 
   }
